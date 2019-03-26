@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AppLivros</string>
+    <string name="text_nome">Nome do livro</string>
+    <string name="text_autor">por %s</string>
+    <string name="text_nome_autor">Autor do livro</string>
+    <string name="text_ano">Ano de publicação</string>
+    <string name="text_genero">Gênero litarário</string>
+    <string name="text_comentarios">Comentários</string>
+    <string name="text_leitura">Ler livro</string>
+    <string name="text_ouvir_livro">Ouvir</string>
+    <string name="text_contador_avaliacao">%d</string>
+    <string name="text_reviews">%d reviews</string>
+    <string name="text_isbn">isbn</string>
+    <string name="text_titulo_resumo">Resumo</string>
+    <string name="text_conteudo_resumo">Resumo do livro</string>
+    <string name="imagem_capa">Capa do livro</string>
+    <string name="imagem_favoritos">Adicionar livro aos favoritos</string>
+    <string name="imagem_leitura">Ler livro</string>
+    <string name="imagem_comentarios">Ler comentários</string>
+    <string name="imagem_ouvir">Ouvir livro</string>
+    <string name="imagem_avaliacao">Avaliação do livro</string>
+    <string name="imagem_icone_decoracao">Decoração em formato de circulo</string>
+</resources>

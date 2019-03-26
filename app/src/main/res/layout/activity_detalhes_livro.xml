@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.detalheslivro.DetalhesLivroActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imagem_capa"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/imagem_capa"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars[0]" />
+
+        <TextView
+            android:id="@+id/text_nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/text_nome"
+            app:layout_constraintEnd_toStartOf="@+id/imagem_favoritos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagem_capa" />
+
+        <ImageView
+            android:id="@+id/imagem_favoritos"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/imagem_favoritos"
+            app:layout_constraintBottom_toBottomOf="@+id/text_nome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_nome"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_favorito"
+            android:tint="@color/bookmark"/>
+
+        <TextView
+            android:id="@+id/text_autor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/text_nome_autor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_nome" />
+
+        <TextView
+            android:id="@+id/text_genero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/text_genero"
+            app:layout_constraintBottom_toBottomOf="@+id/imagem_icone_decoracao"
+            app:layout_constraintEnd_toEndOf="@+id/text_nome"
+            app:layout_constraintStart_toEndOf="@+id/imagem_icone_decoracao"
+            app:layout_constraintTop_toTopOf="@+id/imagem_icone_decoracao" />
+
+        <View
+            android:id="@+id/view_linha_designer_primario"
+            style="@style/view_decoration"
+            android:layout_width="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_avaliacao" />
+
+        <ImageView
+            android:id="@+id/imagem_comentarios"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/imagem_comentarios"
+            app:layout_constraintEnd_toStartOf="@+id/imagem_leitura"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_linha_designer_primario"
+            app:srcCompat="@drawable/ic_comentarios" />
+
+        <ImageView
+            android:id="@+id/imagem_leitura"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/imagem_leitura"
+            app:layout_constraintBottom_toBottomOf="@+id/imagem_comentarios"
+            app:layout_constraintEnd_toStartOf="@+id/imagem_ouvir"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imagem_comentarios"
+            app:layout_constraintTop_toTopOf="@+id/imagem_comentarios"
+            app:srcCompat="@drawable/ic_leitura" />
+
+        <ImageView
+            android:id="@+id/imagem_ouvir"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="48dp"
+            android:contentDescription="@string/imagem_ouvir"
+            app:layout_constraintBottom_toTopOf="@+id/text_leitura"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imagem_leitura"
+            app:layout_constraintTop_toTopOf="@+id/imagem_leitura"
+            app:srcCompat="@drawable/ic_ouvir_livro" />
+
+
+        <View
+            android:id="@+id/view_linha_designer_secundario"
+            style="@style/view_decoration"
+            android:layout_width="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_leitura" />
+
+
+        <TextView
+            android:id="@+id/text_conentarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_comentarios"
+            app:layout_constraintEnd_toEndOf="@+id/imagem_comentarios"
+            app:layout_constraintStart_toStartOf="@+id/imagem_comentarios"
+            app:layout_constraintTop_toBottomOf="@+id/imagem_comentarios" />
+
+        <TextView
+            android:id="@+id/text_leitura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_leitura"
+            app:layout_constraintEnd_toEndOf="@+id/imagem_leitura"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="@+id/imagem_leitura"
+            app:layout_constraintTop_toBottomOf="@+id/imagem_leitura" />
+
+        <TextView
+            android:id="@+id/text_ouvir_livro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_ouvir_livro"
+            app:layout_constraintEnd_toEndOf="@+id/imagem_ouvir"
+            app:layout_constraintStart_toStartOf="@+id/imagem_ouvir"
+            app:layout_constraintTop_toBottomOf="@+id/imagem_ouvir" />
+
+        <TextView
+            android:id="@+id/text-titulo_resumo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/text_titulo_resumo"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_linha_designer_secundario" />
+
+        <TextView
+            android:id="@+id/text_conteudo_resumo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/text_conteudo_resumo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text-titulo_resumo"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <ImageView
+            android:id="@+id/image_avaliacao"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/imagem_avaliacao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_genero"
+            app:srcCompat="@drawable/ic_star_black_24dp" />
+
+        <TextView
+            android:id="@+id/text_contador_avaliacao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/text_contador_avaliacao"
+            app:layout_constraintBottom_toBottomOf="@+id/image_avaliacao"
+            app:layout_constraintStart_toEndOf="@+id/image_avaliacao"
+            app:layout_constraintTop_toTopOf="@+id/image_avaliacao" />
+
+        <TextView
+            android:id="@+id/text_reviews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/text_reviews"
+            app:layout_constraintBottom_toBottomOf="@+id/text_contador_avaliacao"
+            app:layout_constraintStart_toEndOf="@+id/text_contador_avaliacao"
+            app:layout_constraintTop_toTopOf="@+id/text_contador_avaliacao"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imagem_icone_decoracao"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/text_autor"
+            app:layout_constraintStart_toEndOf="@+id/text_autor"
+            app:layout_constraintTop_toTopOf="@+id/text_autor"
+            app:srcCompat="@drawable/ic_lens_black_24dp" />
+
+        <TextView
+            android:id="@+id/text_isbn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/text_isbn"
+            app:layout_constraintBottom_toBottomOf="@+id/text_reviews"
+            app:layout_constraintEnd_toEndOf="@+id/text_genero"
+            app:layout_constraintStart_toEndOf="@+id/text_reviews"
+            app:layout_constraintTop_toTopOf="@+id/text_reviews" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
